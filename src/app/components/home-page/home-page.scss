@@ -1,7 +1,7 @@
 @use '../../../styles/colors' as *;
 
 .home-bg {
-  min-height: 70vh;  // ensures at least some vertical fill on all screens
+  min-height: 70vh;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -26,6 +26,7 @@
       word-break: break-word;
       line-height: 1.1;
     }
+
     p {
       font-size: 1.5rem;
       opacity: 0.85;
@@ -41,9 +42,11 @@
     .home-content {
       padding: 2rem 1.2rem;
       max-width: 90vw;
+
       h1 {
         font-size: 2.1rem;
       }
+
       p {
         font-size: 1.08rem;
       }
@@ -55,16 +58,69 @@
   .home-bg {
     min-height: 65vh;
     padding-top: 1.5rem;
+
     .home-content {
       padding: 1.2rem 0.5rem;
       border-radius: 0.7rem;
       max-width: 85vw;
+
       h1 {
         font-size: 1.5rem;
       }
+
       p {
         font-size: 0.96rem;
       }
     }
+  }
+}
+
+.homeBg img {
+  display: none;
+}
+
+.homeBg {
+  min-height: 70vh;
+  height: 88vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .home-content {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    max-width: 600px;
+    width: 95%;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $color-indigo-eclipse;
+      word-break: break-word;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.5rem;
+      opacity: 0.85;
+      line-height: 1.55;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home-bg {
+    display: none;
+  }
+
+  .homeBg img {
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    object-fit: cover;
   }
 }
