@@ -9,24 +9,23 @@ import { Component } from '@angular/core';
 })
 export class Features {
   constructor() {}
-  features = [
-    {
-      icon: 'pi pi-bolt',
-      title: 'Real-Time Analytics',
-      description: 'Instant insights and monitoring powered by the latest AI.'
-    },
-    {
-      icon: 'pi pi-lock',
-      title: 'Secure Transactions',
-      description: 'Top-grade security keeps your data and trades safe at all times.'
-    },
-    {
-      icon: 'pi pi-globe',
-      title: 'Global Connectivity',
-      description: 'Connect to markets and devices around the world with zero hassle.'
-    },
-  ];
-
+ features = [
+  {
+    icon: 'pi pi-sitemap',
+    title: 'Swarm Intelligence',
+    description: 'Advanced algorithms for real-time collaboration among fleets of drones, enabling synchronized missions and autonomous decision-making.'
+  },
+  {
+    icon: 'pi pi-directions',
+    title: 'Precision Autonomous Navigation',
+    description: 'GPS-independent and AI-driven navigation for challenging environments—ensuring safe flights, automated pathfinding, and seamless multi-drone operations.'
+  },
+  {
+    icon: 'pi pi-video',
+    title: 'AI-Powered Aerial Analytics',
+    description: 'Live data capture and processing from swan drones, delivering actionable insights for surveillance, mapping, and asset inspection.'
+  }
+];
 
 
 ngOnInit() {

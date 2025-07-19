@@ -11,6 +11,7 @@ import { Router, RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('vimana-fx');
   mainLogo: string = 'assets/main_logo.png';
+  menuOpen = false;
 
   constructor(private router: Router) { }
 
@@ -33,4 +34,12 @@ export class App {
   gotoContact() {
     this.router.navigate(['/contact']);
   }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+  this.menuOpen = false;
+}
 }

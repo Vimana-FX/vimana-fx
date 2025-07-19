@@ -1,49 +1,39 @@
-$primary-color: #3498db; 
-$secondary-color: #2c3e50;
+@use '../../../styles/colors' as *;
 
-.stat-list {
+.dashboard-gif-container {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.5rem;
-
-  .stat-block {
-    background: rgba($primary-color, 0.08);
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    min-width: 120px;
-    box-shadow: 0 2px 8px rgba($primary-color, 0.10);
-
-    h2 {
-      font-size: 2.5rem;
-      color: $primary-color;
-      margin-bottom: .2rem;
-    }
-    p {
-      color: #a0e8e2;
-      font-size: 1rem;
-      margin: 0;
-    }
-  }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 320px;
+  padding: 1.5rem 0;
+  background: transparent;
 }
-.main-btn {
-  background: $primary-color;
-  border: none;
-  color: $secondary-color;
-  padding: 0.75rem 1.5rem;
+
+.dashboard-gif {
+  display: block;
+  width: 40%;
+  height: auto;
+  margin: 15px auto;
   border-radius: 1rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: background 0.3s;
-  &:hover {
-    background: $primary-color;
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.08);
+}
+
+@media (max-width: 900px) {
+  .dashboard-gif {
+    max-width: 95%;
   }
 }
 
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(24px);}
-  to   { opacity: 1; transform: translateY(0);}
-}
-.stat-list {
-  animation: fade-in 0.9s ease;
+@media (max-width: 600px) {
+  .dashboard-gif-container {
+    min-height: 180px;
+  }
+    .dashboard-gif {
+      padding-top: 20px;
+      border-radius: 0.5rem;
+      top: 100px;
+      position: relative;
+      width: 280px;
+    }
 }

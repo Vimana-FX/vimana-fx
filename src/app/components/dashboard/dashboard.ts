@@ -10,10 +10,14 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class DashboardComponent {
-  title = 'vimana-fx Hi-Tech Dashboard';
+  title: string = 'Dashboard';
   stats = [
-    { label: 'Flights Today', value: 17 },
-    { label: 'FX Trades', value: 59 },
-    { label: 'Active Sensors', value: 212 }
+    { value: '1000', label: 'Users' },
+    { value: '500', label: 'Active Sessions' },
+    { value: '300', label: 'New Signups' }
   ];
+
+  constructor() {
+    console.log('Dashboard component initialized');
+  }
 }

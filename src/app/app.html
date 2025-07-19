@@ -1,4 +1,4 @@
-<nav class="navbar">
+<!-- <nav class="navbar">
   <div class="nav-logo">
     <img [src]="mainLogo" class="logoMain" />
   </div>
@@ -11,4 +11,33 @@
 </nav>
 <div class="main-layout">
    <router-outlet></router-outlet>
+</div> -->
+
+<nav class="navbar">
+  <div class="nav-logo">
+    <img [src]="mainLogo" class="logoMain" />
+  </div>
+  
+  <!-- Hamburger icon for mobile -->
+  <button 
+    class="hamburger" 
+    type="button" 
+    (click)="menuOpen = !menuOpen" 
+    [attr.aria-expanded]="menuOpen"
+    aria-label="Toggle navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    <li><a (click)="gotoHome(); closeMenu()">Home</a></li>
+    <li><a (click)="gotoDashboard(); closeMenu()">Dashboard</a></li>
+    <li><a (click)="gotoFeatures(); closeMenu()">Features</a></li>
+    <li><a (click)="gotoContact(); closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+<div class="main-layout">
+  <router-outlet></router-outlet>
 </div>
