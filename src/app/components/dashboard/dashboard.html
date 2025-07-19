@@ -1,0 +1,9 @@
+<!-- <p-card header="{{ title }}"> -->
+  <div class="stat-list">
+    <div *ngFor="let stat of stats" class="stat-block">
+      <h2>{{ stat.value }}</h2>
+      <p>{{ stat.label }}</p>
+    </div>
+  </div>
+  <button pButton label="View Analytics" class="main-btn"></button>
+<!-- </p-card> -->

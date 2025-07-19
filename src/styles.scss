@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+$primary-color: #02ede7;
+$secondary-color: #292F36;
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: $secondary-color;
+  color: #fff;
+  margin: 0;
+}
+
+
+$color-indigo-eclipse: #4B3F72;
+$color-sunset-coral: #F76C5E;
+$color-electric-pistachio: #A5E65A;
+$color-misty-lavender: #EDE5F6;
+$color-obsidian-ink: #2D2A32;
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: $color-misty-lavender;
+  color: $color-obsidian-ink;
+  margin: 0;
+}

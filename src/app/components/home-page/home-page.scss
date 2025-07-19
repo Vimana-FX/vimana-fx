@@ -1,0 +1,30 @@
+@use '../../../styles/colors' as *;
+
+.home-bg {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+  color: $color-electric-pistachio;
+  background: $color-electric-pistachio;
+  
+  .home-content {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    max-width: 600px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $color-indigo-eclipse;
+    }
+    p {
+      font-size: 1.5rem;
+      opacity: 0.85;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>We're here to assist you. Get in touch or leave a message below!</p>
+</div>
+<div class="contact-main">
+    <div class="contact-details">
+        <div class="contact-card">
+            <h2>Email</h2>
+            <p>{{supportEmail}}</p>
+        </div>
+        <div class="contact-card">
+            <h2>Address</h2>
+            <p>{{address}}</p>
+        </div>
+    </div>
+    <!-- contact Form -->
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <input type="text" ngModel name="name" placeholder="Your Name" required />
+        <input type="email" ngModel name="email" placeholder="Your Email" required />
+        <textarea ngModel name="message" placeholder="Type your message..." required></textarea>
+        <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+        <div *ngIf="successMsg" class="form-success">{{ successMsg }}</div>
+        <div *ngIf="errorMsg" class="form-error">{{ errorMsg }}</div>
+    </form>
+</div>

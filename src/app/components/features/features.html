@@ -1,0 +1,13 @@
+<div class="features-hero">
+  <h1>Our Awesome Features</h1>
+  <p>Discover what makes vimana-fx unique and powerful.</p>
+</div>
+<div class="features-grid">
+  <div class="feature-card" *ngFor="let feature of features">
+    <div class="icon-wrap">
+      <span [ngClass]="feature.icon"></span>
+    </div>
+    <h2>{{ feature.title }}</h2>
+    <p>{{ feature.description }}</p>
+  </div>
+</div>

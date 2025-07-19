@@ -1,0 +1,79 @@
+@use '../styles/colors' as *;
+
+.navbar {
+  background-color: $color-misty-lavender; // #EDE5F6
+  color: $color-obsidian-ink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(45,42,50,0.04);
+
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: $color-indigo-eclipse;
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-right: 2rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $color-obsidian-ink;
+        font-weight: 600;
+        font-size: 1.15rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.6rem;
+        transition: background 0.2s, color 0.2s;
+        display: inline-block;
+
+        &:hover, &:focus {
+          background: $color-sunset-coral;
+          color: $color-misty-lavender;
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.7rem;
+      width: 100%;
+
+      li a {
+        width: 100%;
+        padding: 0.7rem 1rem;
+      }
+    }
+  }
+}
+
+.logoMain{
+  height: 60px;
+}
+
+.main-layout {
+  padding-top: 72px;
+  flex: 1 1 auto;
+}
+router-outlet + * {
+  padding-top: 0;
+}
